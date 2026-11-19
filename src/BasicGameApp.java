@@ -91,17 +91,30 @@ public class BasicGameApp implements Runnable {
 		System.out.println("crash 1,2");
 		astro.height = astro.height+1;
 			astro2.height = astro2.height+1;
+			astro2.dx = -astro2.dx;
+			astro.dx = -astro.dx;
+			astro2.dy = -astro2.dy;
+			astro.dy = -astro.dy;
 		}
 		if(astro3.hitBox.intersects(astro.hitBox)){
 		System.out.println("crash 1,3");
 			astro.height = astro.height+1;
 			astro3.height = astro3.height+1;
+			astro.dx = -astro.dx;
+			astro3.dx = -astro3.dx;
+			astro.dy = -astro.dy;
+			astro3.dy = -astro3.dy;
+
 		}
 
 		if(astro2.hitBox.intersects(astro3.hitBox)){
 		System.out.println("crash 2,3");
 			astro3.height = astro3.height+1;
 			astro2.height = astro2.height+1;
+			astro3.dx = -astro3.dx;
+			astro2.dx = -astro2.dx;
+			astro3.dy = -astro3.dy;
+			astro2.dy = -astro2.dy;
 		}
 
 		if(!astro.hitBox.intersects(astro2.hitBox)){
